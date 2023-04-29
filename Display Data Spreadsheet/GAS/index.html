@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+</head>
+
+<body>
+    <center><br>
+        <h2>Peserta FDK-52 <br> Fakultas Dakwah dan Komunikasi <br> 2022/2023 Genap</h2>
+        <table border="1" style="border:1px solid black;border-collapse:collapse;" cellpadding="5px">
+            <?var tableData = getSheetData();?>
+            <?for(var i = 0; i < tableData.length; i++) { ?>
+            <?if(i == 0) { ?>
+            <tr>
+                <?for(var j = 0; j < tableData[i].length; j++) { ?>
+                <th><?= tableData[i][j] ?></th>
+                <? } ?>
+            </tr>
+            <? } else { ?>
+            <tr>
+                <?for(var j = 0; j < tableData[i].length; j++) { ?>
+                <td style="text-transform:capitalize;"><?= tableData[i][j] ?></td>
+                <? } ?>
+            </tr>
+            <? } ?>
+            <? } ?>
+        </table>
+    </center>
+</body>
+
+</html>

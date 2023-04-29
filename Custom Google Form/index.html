@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegForm</title>
+</head>
+
+<body>
+    <script>
+        var submitted = false;
+    </script>
+
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location='submission.html';}" frameborder="0"></iframe>
+
+    <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd5irKrY9p3EZxgTJ8Km4Y8q7BvXLaDvykKZ8-j6yGHMCySmg/formResponse"
+        method="post" target="hiddenConfirm" onsubmit="submitted=true">
+
+        <label for="nama">Nama Lengkap <input type="text" name="entry.886242862" id="nama" value="Hanum Sajidah"></label>
+        <label for="kontak">Kontak <input type="text" name="entry.342661627" id="kontak" value="12"></label>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+
+</body>
+
+</html>
